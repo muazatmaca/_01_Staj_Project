@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LeftNaw extends Parent{
+public class LeftNav extends Parent{
 
-    public LeftNaw() {
+    public LeftNav() {
         PageFactory.initElements(GWD.getDriver(),this);
     }
 

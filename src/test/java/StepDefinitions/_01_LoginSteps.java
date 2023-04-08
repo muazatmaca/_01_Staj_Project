@@ -29,8 +29,4 @@ public class _01_LoginSteps {
     }
 
 
-    @And("Create citizenship")
-    public void createCitizenship() {
-        System.out.println("Merhaba etka bey");
-    }
 }
