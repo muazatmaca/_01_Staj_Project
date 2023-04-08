@@ -2,6 +2,7 @@ package StepDefinitions;
 
 import Pages.DialogContent;
 import Utility.GWD;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -21,8 +22,6 @@ public class _01_LoginSteps {
         dc.sendKeysFunction(dc.password,"TechnoStudy123");
         dc.clickFunction(dc.loginButton);
 
-
-
     }
     @Then("User should login succesfully")
     public void userShouldLoginSuccesfully() {
@@ -30,6 +29,8 @@ public class _01_LoginSteps {
     }
 
 
-
-
+    @And("Create citizenship")
+    public void createCitizenship() {
+        System.out.println("Merhaba etka bey");
+    }
 }
