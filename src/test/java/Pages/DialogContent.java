@@ -10,6 +10,7 @@ public class DialogContent extends Parent{
         PageFactory.initElements(GWD.getDriver(),this);
     }
 
+    // ortak locater lar
     @FindBy(css = "input[formcontrolname='username']")
     public WebElement username;
 
@@ -21,7 +22,6 @@ public class DialogContent extends Parent{
 
     @FindBy(css = "span[class='mat-tooltip-trigger logo-text']")
     public WebElement txtTechnoStudy;
-
 
     @FindBy(xpath = "//ms-add-button//button")
     public WebElement addButton;
@@ -37,6 +37,107 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "//ms-search-button//button")
     public WebElement searchButton;
+
+    @FindBy(xpath = "//ms-save-button//button")
+    public WebElement saveButton;
+
+
+    // user story 1 ve 2
+    // position categorries te ve attestation da ekle yaptıktan sonra çıkan name dialogun locater i
+    @FindBy(xpath = "(//ms-text-field//input)[2]")
+    public WebElement nameInput2;
+
+    // save butonunu ortak locater dan alınız
+
+    /////////////////////////////////////////////////
+    // user story 3
+    // ilk name inputunu (nameInput2) den alabilirsiniz
+    @FindBy(xpath = "")
+    public WebElement selectStage;
+
+    // stage in içindeki elemanlardan birisini seçiniz
+    // seçim yaptıktan sonra esc tuşuna basmanız gerekiyor methodları kontrol edin
+    @FindBy(xpath = "")
+    public WebElement containsStage;
+
+    @FindBy(xpath = "")
+    public WebElement description;
+
+    // save butonu ortak locater dan alınız
+
+    ///////////////////////////////////////////////////
+
+    // user story 4
+    // name inputunu (nameInput2) den alabilirsiniz
+
+    @FindBy(xpath = "")
+    public WebElement newFielsCode;
+
+    // sonrasında bir secenek var ama kendisi seçmiş ona herhangi bir işlem yapmıyorum
+    // save locater i ortaklardan alınız.
+
+    /////////////////////////////////////////////
+
+    // user story 5
+    // name inputunu (nameInput2) den alabilirsiniz
+    @FindBy(xpath = "")
+    public WebElement newPositionShortName;
+
+    // save butonuna basınız
+
+    //////////////////////////////////////////////
+    // user story 6
+    // name inputunu (nameInput2) den alabilirsiniz
+
+    @FindBy(xpath = "")
+    public WebElement newSubjectCategoryCode;
+
+    // save butonuna basınız
+
+    ///////////////////////////////////////////
+
+    // user story 7
+    // // name inputunu (nameInput2) den alabilirsiniz
+
+    @FindBy(xpath = "")
+    public WebElement newLocationShortName;
+
+    @FindBy(xpath = "")
+    public WebElement newLocationCapacity;
+
+    // save butonuna basınız
+    ///////////////////////////////////
+
+    // diğer name locaterleri ile farklı
+    @FindBy(xpath = "")
+    public WebElement newSchoolDepartmanName;
+
+    @FindBy(xpath = "")
+    public WebElement newSchoolDepartmanCode;
+
+    // save butonuna basınız
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

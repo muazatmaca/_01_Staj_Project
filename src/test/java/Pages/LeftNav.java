@@ -14,6 +14,79 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "(//span[text()='Setup'])[1]")
     public WebElement setupButton;
 
+    // user story 1 ve user story 2 locater lar
+    @FindBy(xpath = "")
+    public WebElement humonResources;
+
+    // humon resource un altındaki setup
+    @FindBy(xpath = "")
+    public WebElement humonResourscesSetup;
+
+    @FindBy(xpath = "")
+    public WebElement positionCategories;
+
+    @FindBy(xpath = "")
+    public WebElement attestations;
+
+    // user story 3 ve 4
+    // left nav daki dashboard un altındaki setup
+    @FindBy(xpath = "")
+    public WebElement firstSetup;
+
+    @FindBy(xpath = "")
+    public WebElement parameters;
+
+    @FindBy(xpath = "")
+    public WebElement DocumenTypes;
+
+    @FindBy(xpath = "")
+    public WebElement fields;
+
+    // user story 5
+    // diğer locaterlar ortak yukarı tarafı inceleyiniz
+    @FindBy(xpath = "")
+    public WebElement positions;
+
+    // user Story 6
+    @FindBy(xpath = "")
+    public WebElement education;
+
+    // farklı setuplar olduğu için farklı adlandırdım
+    @FindBy(xpath = "")
+    public WebElement educationSetup;
+
+    @FindBy(xpath = "")
+    public WebElement subjectCategories;
+
+    // user story 7
+    // setup ı ortak locaterdan alınız
+
+    @FindBy(xpath = "")
+    public WebElement schoolSetup;
+
+    @FindBy(xpath = "")
+    public WebElement locations;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
