@@ -1,13 +1,16 @@
 package Pages;
 
 import Utility.GWD;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-public class DialogContent extends Parent{
+import org.openqa.selenium.support.ui.ExpectedConditions;
+
+public class DialogContent extends Parent {
 
     public DialogContent() {
-        PageFactory.initElements(GWD.getDriver(),this);
+        PageFactory.initElements(GWD.getDriver(), this);
     }
 
     // ortak locater lar
@@ -40,6 +43,9 @@ public class DialogContent extends Parent{
 
     @FindBy(xpath = "//ms-save-button//button")
     public WebElement saveButton;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement deleteDiaologBtn;
 
 
     // user story 1 ve 2
@@ -117,34 +123,41 @@ public class DialogContent extends Parent{
 
     // save butonuna basınız
 
+    public WebElement getWebElement(String strButton) {
 
+        switch (strButton){
 
+            case "addButton":return addButton;
+            case "editButton":return editButton;
+            case "deleteButton":return deleteButton;
+            case "nameInput":return nameInput;
+            case "searchButton":return searchButton;
+            case "saveButton":return saveButton;
+            case "nameInput2":return nameInput2;
+            case "selectStage":return selectStage;
+            case "containsStage":return containsStage;
+            case "description":return description;
+            case "newFielsCode":return newFielsCode;
+            case "newPositionShortName":return newPositionShortName;
+            case "newSubjectCategoryCode":return newSubjectCategoryCode;
+            case "newLocationShortName":return newLocationShortName;
+            case "newLocationCapacity":return newLocationCapacity;
+            case "newSchoolDepartmanName":return newSchoolDepartmanName;
+            case "newSchoolDepartmanCode":return newSchoolDepartmanCode;
+            case "deleteDiaologBtn":return deleteDiaologBtn;
 
+        }
+        return null;
+    }
 
+    public void deleteItem(String searchText){
+        sendKeysFunction(nameInput,searchText);
+        clickFunction(searchButton);
+        wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//fuse-progress-bar/*"),0));
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        clickFunction(deleteButton);
+        clickFunction(deleteDiaologBtn);
+    }
 
 
 }

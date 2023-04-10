@@ -67,6 +67,31 @@ public class LeftNav extends Parent{
     @FindBy(xpath = "")
     public WebElement locations;
 
+    public WebElement getWebElement(String strButton){
+
+        switch (strButton){
+
+            case "setupButton":return setupButton;
+            case "humonResources":return humonResources;
+            case "humonResourscesSetup":return humonResourscesSetup;
+            case "positionCategories":return positionCategories;
+            case "attestations":return attestations;
+            case "firstSetup":return firstSetup;
+            case "parameters":return parameters;
+            case "DocumenTypes":return DocumenTypes;
+            case "fields":return fields;
+            case "positions":return positions;
+            case "education":return education;
+            case "educationSetup":return educationSetup;
+            case "subjectCategories":return subjectCategories;
+            case "schoolSetup":return schoolSetup;
+            case "locations":return locations;
+
+        }
+
+        return null;
+    }
+
 
 
 
